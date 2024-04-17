@@ -1,10 +1,13 @@
-import Compo1 from "./components/Compo1";
-
+import Header from "./components/Header";
+import Banner from "./components/Banner";
+import Course from "./components/Course";
 export default function Home() {
   return (
    <div>
-    <h1 className="text-center">Página Inicial 2</h1>
-    <Compo1/>
+   
+    <Header/>
+    <Banner/>
+    <Course/>
    </div>
   );
 }
