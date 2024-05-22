@@ -21,7 +21,17 @@ export default function Aside({className}:any) {
                             </Button>
                             </a>
 
-                            
+
+                            <a href="/admin/student">
+                            <Button variant="ghost">
+                                <PersonStanding className="mr-2"/>
+                                Curso
+                            </Button>
+
+                            </a>
+
+                            <h2 className="font-bold">Configurações</h2>
+
                         <a href="/admin/student">
                             <Button variant="ghost">
                                 <PersonStanding className="mr-2"/>
