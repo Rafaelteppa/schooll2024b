@@ -15,7 +15,7 @@ export default function NewStudent() {
   return (
     <Dialog>
       <DialogTrigger asChild>
-        <Button variant="outline">Cadastro De Estudantes</Button>
+        <Button variant="outline">Cadastrar Estudante</Button>
       </DialogTrigger>
       <DialogContent className="sm:max-w-[425px]">
         <DialogHeader>
