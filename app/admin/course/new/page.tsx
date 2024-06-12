@@ -22,17 +22,17 @@ const FormSchema = z.object({
   name: z.string().min(2, {
     message: "Nome precisa ter no minimo 2 caracteres.",
   }),
-  email:z.string().email({message:"Digite o email correto"}),
+
    
   
 })
 
-export default function  SaveStudent() {
+export default function  Savecourse() {
   const form = useForm<z.infer<typeof FormSchema>>({
     resolver: zodResolver(FormSchema),
     defaultValues: {
       name: "",
-      email: "",
+  
     },
   })
 
@@ -44,7 +44,7 @@ export default function  SaveStudent() {
     }
    const response = await  fetch ("https://server20241.vercel.app/students",requestOption)
    form.reset();
-   alert("ESTUDANTE CADASTRADO COM SUCESSO!!")
+   alert("Curso Cadastrado com Sucesso!!")
    
    
   }
@@ -59,7 +59,7 @@ export default function  SaveStudent() {
             <FormItem>
               <FormLabel>Nome</FormLabel>
               <FormControl>
-                <Input placeholder="Digite o nome do estudante" {...field} />
+                <Input placeholder="Digite o nome do Curso" {...field} />
               </FormControl>
               <FormMessage />
             </FormItem>

@@ -11,37 +11,35 @@ import {
 import { revalidatePath } from "next/cache"
   
   
-  interface IStudent{
+  interface Icourse{
     id:number,
     name:string,
     email:string
 
   }
-  export default async function ListStudent() {
-    const students = await list()
+  export default async function Listcourse() {
+    const course = await list()
     async function list(){
-      revalidatePath("/admin/student")
-      const response = await fetch ("https://server20241.vercel.app/students");
+      revalidatePath("/admin/course")
+      const response = await fetch ("https://server20241.vercel.app/courses");
       return response.json();
     }
 
 
     return (
       <Table>
-        <TableCaption>Lista De Estudantes.</TableCaption>
+        <TableCaption>Lista De course.</TableCaption>
         <TableHeader>
           <TableRow>
             <TableHead className="w-[100px]">ID</TableHead>
             <TableHead>NOME</TableHead>
-            <TableHead>EMAIL</TableHead>
           </TableRow>
         </TableHeader>
         <TableBody>
-          {students.map((item:IStudent) => (
+          {course.map((item:Icourse) => (
             <TableRow key={item.id}>
               <TableCell className="font-medium">{item.id}</TableCell>
               <TableCell>{item.name}</TableCell>
-              <TableCell>{item.email}</TableCell>
             </TableRow>
           ))}
         </TableBody>
